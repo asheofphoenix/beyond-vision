@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet">
+		<link rel="icon" href="images/favicon-3.ico" type="image/ico">
+
+
+		<title>Beyond Vision | Request Pricing</title>	
+
+	</head>
+
+	<body>
+		
+	<header>
+		
+		<a href="index.html" class="logo">Beyond Vision</a>
+
+		<nav class="nav-primary">
+
+			<ul>
+
+				<li><a href="index.html">Home</a></li>
+
+				<li><a href="about.html">About</a></li>
+
+				<li><a href="pricing.html">Pricing</a></li>
+
+			</ul>
+
+		</nav>
+
+	</header>
+
+	<main class="container">
+		
+		<h1>Request for Pricing</h1>
+
+		<label for="user-name">Name:</label>
+
+		<p class="hint-text">John Smith</p>
+		
+		<input type="text" id="user-name" name="name" placeholder="John Smith">
+			
+			<div>
+				
+				<label for="message">Description of Project Needs:</label>
+
+				<p class="helper-text">Max 100 words</p>
+
+				<textarea id="message" placeholder="Please type your message here"></textarea>
+
+			</div>
+
+		<label for="email">E-mail Address:</label>
+
+		<p class="hint-text">johnsmith@emailaddress.com</p>
+		
+		<input type="email" id="email" name="email" placeholder="johnsmith@emailaddress.com">
+
+		<label for="user-choose">Choose a type of project</label>
+			
+			<select id="user-choose" name="choose">
+				<option value="" disabled selected hidden>Select</option>
+
+				<option>Virtual Reality</option>
+				
+				<option>Augmented Reality</option>
+				
+				<option>Other</option>
+			
+			</select>
+
+		<div class="send-button">
+		
+			<button id="open-modal" type="submit">Submit</button>
+
+			<dialog id="modal-demo">
+
+				<h2>Thank you!</h2>
+
+				<p>Your request is on it's way and you should hear from someone in no time!</p>
+
+			</dialog>
+
+		</div>
+
+
+	</main>
+
+	<footer class="tertiary-text">
+		
+		<p>Foresight Design System created by Ashlie Weitting</p>
+		<p>Ashlie Weitting has been working in design for several years and building websites only recently. Combining the two skills has been just the challenge Ashlie has been looking forward to.</p>
+
+		<nav class="nav-secondary">
+			<ul>
+				<li><a href="https://www.linkedin.com/in/ashlie-weitting-rubio/">Linked In</a></li>
+
+				<li><a href="https://ashlieweittingr.000webhostapp.com/">Website</a></li>
+
+				<li><a href="google.com">Facebook</a></li>
+
+			</ul>
+
+		</nav>
+
+		<p>&copy; Copyright 2020</p>
+
+	</footer>
+
+	<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('open-modal');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
+
+	</body>
+
+</html>
